@@ -37,7 +37,6 @@ $listItems = [
     ],
 ];
 
-
 $services = [
     [
         'title' => 'Building Facade Cleaning',
