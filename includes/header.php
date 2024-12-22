@@ -1,8 +1,8 @@
 <?php
-$activePage = $_GET['page'] ?? 'index';
+$activePage = $_GET['page'] ?? 'home';
 
 $menuItems = [
-    ['name' => 'Home', 'link' => 'app.php?page=index', 'activeKey' => 'index', 'isActive' => true],
+    ['name' => 'Home', 'link' => 'app.php?page=home', 'activeKey' => 'home', 'isActive' => true],
     ['name' => 'Our Services', 'link' => 'app.php?page=service', 'activeKey' => 'service', 'isActive' => true],
     ['name' => 'Our Gallery', 'link' => 'app.php?page=gallery', 'activeKey' => 'gallery', 'isActive' => true],
     ['name' => 'About Us', 'link' => 'app.php?page=about', 'activeKey' => 'about', 'isActive' => true],
@@ -48,7 +48,7 @@ $menuItems = [
 
 <!-- Navbar Start -->
 <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5" style="top: -100px;">
-    <a href="app.php?page=index" class="navbar-brand d-flex align-items-center">
+    <a href="app.php?page=home" class="navbar-brand d-flex align-items-center">
         <h1 class="m-0"><img class="img-fluid me-3" src="img/logo.jpg" alt="">Enscone</h1>
     </a>
     <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
