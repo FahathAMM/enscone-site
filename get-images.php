@@ -22,6 +22,7 @@ foreach ($images as $key => $filename) {
     }
 }
 
+
 // Pagination logic
 $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 $imagesPerPage = 54;
