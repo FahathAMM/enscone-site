@@ -13,7 +13,7 @@
      <div class="container">
          <div class="row g-5 align-items-center">
              <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
-                 <div id="lcl_elems_wrapper"></div>
+                 <div id="lcl_elems_wrapper" class="text-center"></div>
                  <div class="w-100 text-center">
                      <button id="load-more" class="btn btn-primary btn-sm">Load More</button>
                  </div>
