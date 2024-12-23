@@ -44,18 +44,15 @@
                             </div>
                         </div>
                         <div class="col-12">
-                            <div class="form-floating">
-                                <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
-                                <label for="message">Message</label>
-                            </div>
-                        </div>
-                        <div class="col-12">
                             <button class="btn btn-primary py-3 px-5" type="submit">Submit</button>
                         </div>
                     </div>
                 </form>
 
-
+                <form method="POST" action="" class="mt-4">
+                    <input type="text" name="removeFile" placeholder="Enter file name to remove" class="form-control mb-3">
+                    <button class="btn btn-danger py-2 px-4" type="submit">Remove File</button>
+                </form>
 
             </div>
         </div>
@@ -75,6 +72,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['name'])) {
     }
 }
 
+// Handle removal request (example: via POST or GET)
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['removeFile'])) {
+    $fileName = $_POST['removeFile'];
+    echo removeImage($fileName);
+}
+
+function removeImage($fileName, $uploadPath = 'img/gallery/')
+{
+    // Construct the full file path
+    $filePath = $uploadPath . $fileName;
+
+    // Check if the file exists
+    if (file_exists($filePath)) {
+        // Delete the file
+        if (unlink($filePath)) {
+            return "File '$fileName' removed successfully.";
+        } else {
+            return "Failed to remove file '$fileName'.";
+        }
+    } else {
+        return "File '$fileName' does not exist.";
+    }
+}
 
 // Function to handle multiple image uploads
 function uploadMultipleImages($files, $uploadPath = 'img/gallery/')
@@ -120,14 +140,4 @@ function uploadMultipleImages($files, $uploadPath = 'img/gallery/')
     ];
 }
 
-// Handle form submission
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['name'])) {
-    $result = uploadMultipleImages($_FILES['name']);
-    if (!empty($result['uploaded'])) {
-        echo "Uploaded files: " . implode(', ', $result['uploaded']);
-    }
-    if (!empty($result['errors'])) {
-        echo "Errors: " . implode(', ', $result['errors']);
-    }
-}
 ?>
