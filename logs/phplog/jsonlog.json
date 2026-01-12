@@ -1,0 +1,21 @@
+{
+    "date": "2025-01-16 08:36:15",
+    "title": "INFO",
+    "message": "intial log",
+    "ip_address": "::1",
+    "url": "\/ensconesite\/app.php?page=home",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/132.0.0.0 Safari\/537.36",
+    "device": "Desktop",
+    "browser": "Chrome",
+    "os": "Windows"
+}
+{
+    "date": "2025-01-16 08:37:30",
+    "title": "INFO",
+    "message": "intial log",
+    "ip_address": "::1",
+    "url": "\/ensconesite\/app.php?page=home",
+    "device": "Desktop",
+    "browser": "Chrome",
+    "os": "Windows"
+}
