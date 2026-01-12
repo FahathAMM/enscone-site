@@ -485,3 +485,8 @@
 .footer .copyright a:hover {
     color: #FFFFFF;
 }
+
+.clients .swiper-pagination {
+    margin-top: 20px;
+    position: relative;
+}
